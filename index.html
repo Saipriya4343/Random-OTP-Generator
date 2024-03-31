@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randomotp</title>
+    <style>
+        body{
+            background-color: #EE82EE;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var box=document.createElement("div")
+        box.style.height="300px"
+        box.style.width="280px"
+        box.style.border="2px solid black"
+        box.style.marginLeft="500px"
+        box.style.marginTop="90px"
+        box.style.backgroundColor="#F5DEB3"
+        document.body.appendChild(box)
+
+
+        var btn=document.createElement("button")
+        btn.innerText="Generate Otp"
+        btn.style.backgroundColor="pink"
+        btn.style.border="2px solid black"
+        btn.style.height="50px"
+        btn.style.width="90px"
+        btn.style.marginTop="60px"
+        
+        btn.style.marginLeft="100px"
+        box.appendChild(btn)
+        box.onclick=change;
+
+
+        var display=document.createElement("p")
+        display.style.marginBottom="100px"
+        display.style.paddingLeft="120px"
+        display.style.fontSize="20px"
+        box.appendChild(display)
+
+        function change(){
+            var randomotp=Math.ceil(100000+Math.random()*900000);
+            display.innerText=randomotp
+        }
+    </script>
+    
+</body>
+</html>
